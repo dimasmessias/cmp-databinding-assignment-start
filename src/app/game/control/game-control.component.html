@@ -1,1 +1,10 @@
-<p>game-control works!</p>
+<div class="form-group input-group">
+	<button class="btn-primary form-control"
+			  [ngClass]="isGameRunning ? 'btn-dark' : 'btn-success'"
+			  [disabled]="isGameRunning" (click)="onStart()">Start
+	</button>
+	<button class="btn-primary form-control"
+			  [ngClass]="isGameRunning ? 'btn-danger' : 'btn-dark'"
+			  [disabled]="!isGameRunning" (click)="onStop()">Stop
+	</button>
+</div>
